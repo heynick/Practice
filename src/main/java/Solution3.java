@@ -5,25 +5,29 @@
  */
 public class Solution3 {
     public int lengthOfLongestSubstring(String s){
+        // 循环不变量 [left,right)内不包含重复字符
+        // 滑动窗口长度 right-left
         int len = s.length();
-        {
-            if (len < 2) {
-                return len;
-            }
-            char[] charArray = s.toCharArray();
-            int[] freq = new int[128];
-            int res = 1;
-            for (int left = 0, right = 0; right < len; right++) {
-                freq[charArray[right]]++;
-                if (freq[charArray[right]] == 2) {
-                    while (freq[charArray[right]] == 2){
-                        freq[charArray[left]]--;
-                        left++;
-                    }
+        // 字符串长度为0或1时，返回0或1
+        if (len < 2) {
+            return len;
+        }
+
+        char[] charArray = s.toCharArray();
+        // 描述[left,right)是否有元素的变量
+        int[] freq = new int[128];
+        int res = 1;
+        for (int left = 0, right = 0; right < len; right++) {
+            freq[charArray[right]]++;
+            if (freq[charArray[right]] == 2) {
+                while (freq[charArray[right]] == 2){
+                    freq[charArray[left]]--;
+                    left++;
                 }
             }
-            return res;
+            res = Math.max(res, right - left + 1);
         }
+        return res;
     }
 
     public static void main(String[] args){
