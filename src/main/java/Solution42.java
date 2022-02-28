@@ -31,7 +31,6 @@ public class Solution42 {
     }
 
     private int rightMax(int center, int[] height, int n){
-        //看看最右最多能走多远
         int res = 0;
         for(int i = center + 1; i < n; i++){
             res = Math.max(res, height[i]);
