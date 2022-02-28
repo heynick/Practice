@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import Struct.TreeNode;
+
 import java.util.List;
 
 /**
@@ -8,14 +9,5 @@ import java.util.List;
  */
 
 public class Solution102 {
-    public List<List<Integer>> levelOrder(TreeNode root){
-        return null;
-    }
-
-    public static void main(String[] args) {
-        Integer[] integers = {3,9,20,null,null,15,7};
-        TreeNode node = TreeNode.makeTree(integers);
-        TreeNode.middleTraverse(node);
-    }
 
 }
