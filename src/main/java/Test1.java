@@ -1,3 +1,5 @@
+import Struct.SingleLinkedList;
+
 /**
  * @Author HEYNICK
  * @Date 2022/2/28 15:50
@@ -5,7 +7,11 @@
  */
 public class Test1 {
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3};
-        System.out.println(nums);
+        int[] test = new int[]{1,2,3,4,5};
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        for (int i : test) {
+            singleLinkedList.addLast(i);
+        }
+        singleLinkedList.display();
     }
 }
