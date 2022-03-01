@@ -9,9 +9,7 @@ public class Test1 {
     public static void main(String[] args) {
         int[] test = new int[]{1,2,3,4,5};
         SingleLinkedList singleLinkedList = new SingleLinkedList();
-        for (int i : test) {
-            singleLinkedList.addLast(i);
-        }
+        singleLinkedList.makeSingleLinkedList(test);
         singleLinkedList.display();
     }
 }
