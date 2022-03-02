@@ -1,6 +1,8 @@
 package Struct;
 
 
+import java.util.List;
+
 /**
  * @Author HEYNICK
  * @Date 2022/2/28 17:17
@@ -152,6 +154,9 @@ public class SingleLinkedList {
         return count;
     }
 
+    /**
+     * 打印链表
+     */
     public void display(){
         ListNode cur = this.head;
         while(cur != null){
@@ -159,7 +164,16 @@ public class SingleLinkedList {
             cur = cur.next;
         }
     }
+    public void display(ListNode cur){
+        while(cur != null){
+            System.out.println(cur.val+ " ");
+            cur = cur.next;
+        }
+    }
 
+    /**
+     * 删除链表
+     */
     public void clear(){
         ListNode cur = this.head;
         while(cur != null){
@@ -170,11 +184,14 @@ public class SingleLinkedList {
         this.head = null;
     }
 
-    public void makeSingleLinkedList(int[] list){
+    /**
+     * 根据数组生成单链表
+     */
+    public ListNode makeSingleLinkedList(int[] list){
         ListNode cur = new ListNode();
         for(int i : list){
             addLast(i);
         }
+        return this.head;
     }
-
 }
