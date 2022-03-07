@@ -1,3 +1,4 @@
+import Struct.ListNode;
 import Struct.SingleLinkedList;
 
 /**
@@ -11,5 +12,8 @@ public class Test1 {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         singleLinkedList.makeSingleLinkedList(test);
         singleLinkedList.display();
+
+        ListNode listNode = new ListNode(test);
+        System.out.println(listNode.toString());
     }
 }

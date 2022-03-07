@@ -241,6 +241,13 @@ public class Solution912{
         return le;
     }
 
+    /**
+     * 堆排序
+     */
+    public int[] heapSortArray (int[] nums) {
+        return nums;
+    }
+
 
     /**
      * 主程序
@@ -282,6 +289,11 @@ public class Solution912{
         int[] nums6 = {8, 3, 9, 6, 4, 1, 5, 2, 10, 7};
         int[] quickSortArray = solution912.quickSortArray(nums6);
         System.out.println(Arrays.toString(quickSortArray));
+
+        System.out.println("堆排序");
+        int[] nums7 = {8, 3, 9, 6, 4, 1, 5, 2, 10, 7};
+        int[] heapkSortArray = solution912.heapSortArray(nums7);
+        System.out.println(Arrays.toString(heapkSortArray));
     }
 
 }
