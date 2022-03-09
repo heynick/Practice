@@ -1,3 +1,5 @@
+import Struct.MaxHeap;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -245,7 +247,36 @@ public class Solution912{
      * 堆排序
      */
     public int[] heapSortArray (int[] nums) {
+        int len = nums.length;
+        heapify(nums, len);
+        // 先交换，再将堆顶元素下沉
+        for (int i = len - 1; i >= 1;) {
+            swap(nums, 0, i);
+            i--;
+            siftDown(nums, 0, i);
+        }
         return nums;
+    }
+
+    private void heapify(int[] nums, int len) {
+        for (int i = (len - 1) / 2; i >= 0; i--) {
+            siftDown(nums, i, len-1);
+        }
+    }
+
+    private void siftDown(int[] nums, int k, int end) {
+        while (2 * k + 1 <= end) {
+            int j = 2 * k + 1;
+            if (j + 1 <= end && nums[j + 1] > nums[j]) {
+                j++;
+            }
+            if (nums[j] > nums[k]) {
+                swap(nums, j, k);
+            } else {
+                break;
+            }
+            k = j;
+        }
     }
 
 
@@ -292,8 +323,8 @@ public class Solution912{
 
         System.out.println("堆排序");
         int[] nums7 = {8, 3, 9, 6, 4, 1, 5, 2, 10, 7};
-        int[] heapkSortArray = solution912.heapSortArray(nums7);
-        System.out.println(Arrays.toString(heapkSortArray));
+        int[] heapSortArray = solution912.heapSortArray(nums7);
+        System.out.println(Arrays.toString(heapSortArray));
     }
 
 }

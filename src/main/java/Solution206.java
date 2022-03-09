@@ -1,8 +1,6 @@
 import Struct.ListNode;
 import Struct.SingleLinkedList;
 
-import java.util.List;
-
 /**
  * @Author HEYNICK
  * @Date 2022/3/2 16:24
