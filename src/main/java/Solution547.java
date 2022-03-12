@@ -20,11 +20,11 @@ public class Solution547 {
         return unionFind.getCount();
     }
 
-    private class UnionFind {
+    private static class UnionFind {
         /**
          * quick-find 每个结点的id标识，id标识一样，标识被分在一个组; quick-union
          */
-        private int[] parent;
+        private final int[] parent;
         /**
          * 连通分量的个数
          */
