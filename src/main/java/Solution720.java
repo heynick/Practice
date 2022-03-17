@@ -37,15 +37,6 @@ public class Solution720 {
 
         }
 
-        Arrays.sort(words, (a, b) -> {
-            return 0;
-        });
-
-
-
-
-
-
         return ans;
     }
 
