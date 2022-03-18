@@ -1,3 +1,5 @@
+import Struct.Trie;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,36 +12,22 @@ import java.util.Set;
 public class Solution720 {
     public String longestWord(String[] words) {
 
-        Set<String> set = new HashSet<>();
+        Trie trie = new Trie();
         for (String word : words) {
-            set.add(word);
+            trie.insert(word);
         }
 
-        String ans = "";
+        String res = "";
 
-        out:
         for (String word : words) {
-            for (int i = 1; i < word.length(); i++) {
-                if (!set.contains(word.substring(0, i))) {
-                    continue  out;
+            if (trie.search(word)){
+                if (word.length() > res.length() || (word.length() == res.length() && word.compareTo(res) < 0)){
+                    res = word;
                 }
             }
-
-            if (word.length() > ans.length()) {
-                ans = word;
-            } else if (word.length() == ans.length()) {
-                if (word.compareTo(ans) < 0) {
-                    ans = word;
-                }
-            }
-
-
-
         }
-
-        return ans;
+        return res;
     }
-
 
     public static void main(String[] args) {
         String[] words = {"a","banana","app","appl","ap","apply","apple"};
@@ -47,6 +35,9 @@ public class Solution720 {
         String res = solution720.longestWord(words);
         System.out.println(res);
     }
+}
 
 
-    }
+
+
+
