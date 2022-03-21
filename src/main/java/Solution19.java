@@ -63,8 +63,6 @@ public class Solution19 {
         int[] array = {1,2,3,4,5};
         ListNode head = new ListNode(array);
         Solution19 solution19 = new Solution19();
-/*        solution19.removeNthFromEnd(head, n);
-        System.out.println(head);*/
 
         solution19.twoIndexRemoveNthFromEnd(head, n);
         System.out.println(head);

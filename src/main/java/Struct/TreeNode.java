@@ -45,13 +45,17 @@ public class TreeNode {
             }
         }
         TreeNode node = null;
-        for (int i = 1; i < nodes.length / 2; i++) {
+        for (int i = 1; i <= nodes.length / 2; i++) {
             node = nodes[i];
             if (node == null) {
                 continue;
             }
             node.left = nodes[2 * i];
-            node.right = nodes[2 * i + 1];
+            try {
+                node.right = nodes[2 * i + 1];
+            }catch (Exception e) {
+                break;
+            }
         }
         return nodes[1];
     }
