@@ -3,7 +3,7 @@ package Struct;
 /**
  * @Author HEYNICK
  * @Date 2022/2/28 16:09
- * @Description default
+ * @Description 二叉树
  */
 public class TreeNode {
     public int val;
@@ -50,8 +50,8 @@ public class TreeNode {
             if (node == null) {
                 continue;
             }
-            node.left = nodes[2 * i];
             try {
+                node.left = nodes[2 * i];
                 node.right = nodes[2 * i + 1];
             }catch (Exception e) {
                 break;

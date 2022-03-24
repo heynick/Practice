@@ -4,7 +4,7 @@ package Struct;
 /**
  * @Author HEYNICK
  * @Date 2022/2/28 17:17
- * @Description default
+ * @Description 单链表操作
  */
 public class SingleLinkedList {
 

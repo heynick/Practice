@@ -3,7 +3,7 @@ package Struct;
 /**
  * @Author HEYNICK
  * @Date 2022/2/28 16:05
- * @Description default
+ * @Description 单链表
  */
 public class ListNode {
     public int val;

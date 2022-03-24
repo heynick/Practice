@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @Author HEYNICK
  * @Date 2022/3/21 20:40
- * @Description default
+ * @Description 全O(1)的数据结构，对应432题
  */
 public class AllOne {
     Node root;
