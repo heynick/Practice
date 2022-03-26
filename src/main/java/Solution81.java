@@ -7,8 +7,7 @@ public class Solution81 {
     public boolean search(int[] nums, int target) {
         int len = nums.length;
         int left = 0, right = len - 1;
-
-
+        return true;
     }
 
     public static void main(String[] args) {
