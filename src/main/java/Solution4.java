@@ -9,7 +9,7 @@ public class Solution4 {
              return findMedianSortedArrays(nums2, nums1);
          }
          int m = nums1.length;
-         int n = nums1.length;
+         int n = nums2.length;
          int left = 0, right = m;
          // median1:前一部分的最大值 median2:后一部分的最小值
          int median1 = 0, median2 =0;
