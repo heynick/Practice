@@ -8,13 +8,6 @@ import java.util.Arrays;
 public class Solution1818 {
     int mod = (int) 1e9 + 7;
 
-    public static void main(String[] args) {
-        int[] nums1 = {1, 7, 5}, nums2 = {2, 3, 5};
-        Solution1818 solution1818 = new Solution1818();
-        int ans = solution1818.minAbsoluteSumDiff(nums1, nums2);
-        System.out.println(ans);
-    }
-
     public int minAbsoluteSumDiff(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] sorted = nums1.clone();
@@ -47,4 +40,14 @@ public class Solution1818 {
         return (int) ((sum - max) % mod);
     }
 
+
+    public static void main(String[] args) {
+        int[] nums1 = {1, 7, 5}, nums2 = {2, 3, 5};
+        Solution1818 solution1818 = new Solution1818();
+        int ans = solution1818.minAbsoluteSumDiff(nums1, nums2);
+        System.out.println(ans);
+    }
+
 }
+
+
