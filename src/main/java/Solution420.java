@@ -12,7 +12,6 @@ public class Solution420 {
     }
 
     public int strongPasswordChecker(String password) {
-
-
+        return 1;
     }
 }
