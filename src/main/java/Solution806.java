@@ -16,7 +16,7 @@ public class Solution806 {
                 b += t;
             }
         }
-        if (b != 0) {
+         if (b != 0) {
             a++;
         }
         return new int[]{a,b};
